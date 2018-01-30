@@ -1,0 +1,23 @@
+{
+  "name": "musicianfriendfinder",
+  "version": "1.0.0",
+  "description": "An Application to help musicians find people to play with in their area",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freezepop9178/MusicianFriendFinder.git"
+  },
+  "author": "Aaron Freeze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/freezepop9178/MusicianFriendFinder/issues"
+  },
+  "homepage": "https://github.com/freezepop9178/MusicianFriendFinder#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

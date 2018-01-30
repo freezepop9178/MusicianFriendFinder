@@ -4,3 +4,4 @@
 
 /.vs
 /MusicianFriendFinder/.vs
+node_modules/*
