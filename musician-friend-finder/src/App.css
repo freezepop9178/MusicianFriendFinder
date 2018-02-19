@@ -1,11 +1,11 @@
 .App {
   text-align: left;
   height: 100%;
+  width: 100%;
 }
 
-.mainSection{
-  width: 90%;
-  float: right;
+.mainHeader{
+  width: inherit;
   height: 10rem;
   background: aqua;
 }
@@ -15,11 +15,12 @@
   background: purple;
   height: 100%;
 }
-.leftHeader{
-  position: absolute;
+.sideBarMenu{
+  position: fixed;
   width: 10%;
   background: green;
   height: 100%;
+  top: 0px;
 }
 .mainBody{
   position: relative;

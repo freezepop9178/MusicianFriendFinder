@@ -9,20 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SideBarMenu></SideBarMenu>
         <MainHeader/>
+        <SideBarMenu/>
         <MainBody/>
-        <div className="mainSection">
-          <div className="mainHeader">
-            <h1>This is the Main Header, there will be a picture here</h1>
-          </div>
-        </div>
-        <div className="rightSection">
-
-        </div>
-        <div className="mainBody">
-          <span>This is the main landing page for the Musician Friend Finder application</span>
-        </div>
       </div>
     );
   }

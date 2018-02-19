@@ -4,9 +4,9 @@ import '../../App.css';
 class MainBody extends Component {
     render() {
         return(
-            <div>
-                <p>This is the Main Body in component form</p>
-            </div>
+        <div className="mainBody">
+            <span>This is the main landing page for the Musician Friend Finder application</span>
+          </div>
         );
     }
 }

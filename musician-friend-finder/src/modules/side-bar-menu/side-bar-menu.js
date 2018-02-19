@@ -4,7 +4,7 @@ import '../../App.css';
 class SideBarMenu extends Component {
     render() {
         return(
-            <div>
+            <div className="sideBarMenu">
                 <p>This is the side menu in component form</p>
             </div>
         );
