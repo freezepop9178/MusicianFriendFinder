@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import '../../App.css';
+import '../../styles/css/fontawesome-all.css';
+
 
 class MainHeader extends Component {
+    constructor(props){
+        super(props);
+    }
+
     render() {
         return(
             <div className="mainHeader">
-                
+                <a onClick={this.props.toggleSidebar}><i className="fas fa-list fa-2x"></i></a>
+                <h1 className="pageTitle">Musician Friend Finder</h1>
             </div>
         );
     }
