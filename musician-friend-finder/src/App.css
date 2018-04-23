@@ -1,0 +1,91 @@
+.mainHeader{
+  height: 5rem;
+  background: aqua;
+  width: 100%;
+  display: inline-flex;
+}
+.pageTitle{
+  padding-left: 2rem;
+}
+
+.sidebarContent{
+  background: blue;
+  border: black 2px;
+  height: 100%;
+  width: 12rem;
+}
+.sidebarContent>span{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  display: block;
+}
+
+.sideBarMenu{
+  position: fixed;
+  width:5%;
+  background: green;
+  height: 100%;
+  top: 0px;
+}
+
+.menuIcon{
+  padding-left: 1rem;
+  padding-top: 28px;
+  font-size: 2em;
+}
+
+.mainBody{
+  width: 100%;
+}
+
+.googleMap{
+  height: 100vh;
+  width: 100%;
+}
+.loginButton{
+  float: right;
+
+}
+.title{
+  width: 10%;
+}
+header { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: lightcoral;
+}
+.sidebar {
+  position: absolute;
+  top: 60px;
+  left: -300px;
+  height: 100%;
+  width: 300px;
+  transition: left .3s ease-in-out;
+  background-color: white;
+}
+.sidebar-toggle {
+  position: absolute;
+  top: 20%;
+  right: -60px;
+  height: 60px;
+  width: 60px;
+  z-index: 1;
+}
+.content {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transition: left .3s ease-in-out;
+  background-color: lightgray;
+}
+.sidebar.open {
+    left: 0;
+}
+.content.open {
+    left: 300px;
+}
