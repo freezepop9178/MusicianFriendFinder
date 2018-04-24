@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import MainHeader from './modules/main-header/main-header.js';
-import MainBody from './modules/main-body/main-body.js'
+import MapBody from './modules/map-body/map-body.js'
 import Sidebar from 'react-sidebar';
 import SidebarContent from './modules/sidebar-content/sidebar-content.js';
+import {Route, Switch} from 'react-router-dom';
+import AboutPageBody from '../src/modules/about-body/about-page.js';
+import ErrorPage from '../src/modules/error-page/error-page.js';
 
 
 class App extends Component {
@@ -11,35 +14,26 @@ class App extends Component {
     super(props);
 
     this.state = {
-      sidebarOpen: false,
-      coordinates: {
-        center: {
-          lat: 38.9717,
-          lng: -95.2353
-        },
-        zoom: 11,
-        googleAPI: 'AIzaSyDBuUslQmMpIKOEtdiEY9Sx-C6M9xyDUYU'
-      }
+      sidebarOpen: false
     }
 
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
-  
+
   onSetSidebarOpen(open) {
-    console.log(open);
     this.setState({sidebarOpen: open});
   }
       
   render() {
     return (
       <div className="App">
-        
-        <Sidebar sidebar={<SidebarContent/>}
-                   open={this.state.sidebarOpen}
-                   onSetOpen={this.onSetSidebarOpen}
-                   shadow={false}>
+        <Sidebar sidebar={<SidebarContent/>} open={this.state.sidebarOpen} onSetOpen={this.onSetSidebarOpen} shadow={false}>
           <MainHeader toggleSidebar={this.onSetSidebarOpen}/>
-          <MainBody baseLocation={this.state.coordinates}/>
+          <Switch>
+            <Route exact path="/" component={MapBody} />
+            <Route path="/about" component={AboutPageBody} />
+            <Route component={ErrorPage} />
+          </Switch>
         </Sidebar>
       </div>
     );
