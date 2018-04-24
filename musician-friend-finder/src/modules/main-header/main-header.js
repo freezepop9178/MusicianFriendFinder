@@ -3,10 +3,6 @@ import '../../styles/css/fontawesome-all.css';
 
 
 class MainHeader extends Component {
-    constructor(props){
-        super(props);
-    }
-
     render() {
         return(
             <div className="mainHeader">

@@ -11,12 +11,20 @@ class App extends Component {
     super(props);
 
     this.state = {
-      sidebarOpen: false
+      sidebarOpen: false,
+      coordinates: {
+        center: {
+          lat: 38.9717,
+          lng: -95.2353
+        },
+        zoom: 11,
+        googleAPI: 'AIzaSyDBuUslQmMpIKOEtdiEY9Sx-C6M9xyDUYU'
+      }
     }
 
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
   }
-
+  
   onSetSidebarOpen(open) {
     console.log(open);
     this.setState({sidebarOpen: open});
@@ -31,7 +39,7 @@ class App extends Component {
                    onSetOpen={this.onSetSidebarOpen}
                    shadow={false}>
           <MainHeader toggleSidebar={this.onSetSidebarOpen}/>
-          {/* <MainBody/> */}
+          <MainBody baseLocation={this.state.coordinates}/>
         </Sidebar>
       </div>
     );

@@ -3,22 +3,18 @@ import GoogleMapReact from 'google-map-react';
 import '../../App.css';
 
 export class MainBody extends React.Component {
-    static defaultProps = {
-        center: {
-          lat: 38.9717,
-          lng: -95.2353
-        },
-        zoom: 11,
-        googleAPI: 'AIzaSyDBuUslQmMpIKOEtdiEY9Sx-C6M9xyDUYU'
-      };
+    constructor(props){
+        super(props);
+        console.log(props);
+    };
 
     render() {
         return(
         <div className="mainBody">
             <div className="googleMap">
-                <GoogleMapReact bootstrapURLKeys={{ key: this.props.googleAPI }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}></GoogleMapReact>
+                <GoogleMapReact bootstrapURLKeys={{ key: this.props.baseLocation.googleAPI }} defaultCenter={this.props.baseLocation.center} defaultZoom={this.props.baseLocation.zoom}></GoogleMapReact>
             </div>
-            
+
         </div>
         );
     }
